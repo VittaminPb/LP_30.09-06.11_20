@@ -10,6 +10,6 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 if (num % 2 == 0)
    
-    Console.WriteLine("Четное");
+    Console.WriteLine("Да");
 
-else Console.WriteLine("Нечетное");
+else Console.WriteLine("Нет");
