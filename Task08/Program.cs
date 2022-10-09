@@ -7,11 +7,16 @@
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine($"Все четные числа в промежутке от 1 до {num}: ");
+if (num > 0)
+    Console.WriteLine($"Все четные числа в промежутке от 1 до {num}: ");
+
+else Console.WriteLine("Некорректный ввод данных");
 
 int count = 2;
+
 while (count <= num)
 {
-    Console.Write ($"{count} ");
-    count = count +2;
+    Console.Write($"{count} ");
+    count = count + 2;
 }
+

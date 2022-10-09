@@ -12,7 +12,7 @@ int num2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число 3: ");
 int num3 = Convert.ToInt32(Console.ReadLine());
 
-if (num1 == num2 & num2 == num3)  
+if (num1 == num2 & num2 == num3)
 
     Console.WriteLine("Все числа равны");
 else
