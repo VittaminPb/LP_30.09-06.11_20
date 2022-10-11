@@ -7,7 +7,7 @@
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-if (num > 0)
+if (num > 1)
     Console.WriteLine($"Все четные числа в промежутке от 1 до {num}: ");
 
 else Console.WriteLine("Некорректный ввод данных");
@@ -19,4 +19,3 @@ while (count <= num)
     Console.Write($"{count} ");
     count = count + 2;
 }
-
