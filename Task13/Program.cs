@@ -16,7 +16,4 @@ if (num > 99)
     }
     Console.Write($"{num % 10}");
 }
-else
-{
-    Console.WriteLine("третьей цифры нет");
-}
+else Console.WriteLine("третьей цифры нет");
