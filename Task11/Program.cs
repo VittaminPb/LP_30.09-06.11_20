@@ -17,7 +17,7 @@ Console.WriteLine($"Случайное число из диапазона 1 - 99
 int SplitNumber(int num)
 {
     int firstDigit = number / 100; // 456 / 100 = 4
-    int thirdDigit = number % 10;
+    int thirdDigit = number % 10; // 456 % 10 = 6
     int splitNumber = firstDigit * 10 + thirdDigit;
     return splitNumber;
 }
