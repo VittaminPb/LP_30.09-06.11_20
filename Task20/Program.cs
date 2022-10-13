@@ -5,3 +5,21 @@
 // A (3,6); B (2,1) -> 5,09
 // A (7,-5); B (1,-1) -> 7,21
 
+Console.Write ("Введите координаты Х точки А: ");
+int xa = Convert.ToInt32(Console.ReadLine());
+Console.Write ("Введите координаты Y точки А: ");
+int ya = Convert.ToInt32(Console.ReadLine());
+Console.Write ("Введите координаты Х точки B: ");
+int xb = Convert.ToInt32(Console.ReadLine());
+Console.Write ("Введите координаты Y точки B: ");
+int yb = Convert.ToInt32(Console.ReadLine());
+
+double distance = Math.Round(Distance(xa, ya, xb, yb), 2, MidpointRounding.ToZero);
+
+Console.WriteLine($"Расстояние от точки А до точки В: {distance}");
+
+double Distance(int x1, int y1, int x2, int y2)
+{
+    double distAB = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
+    return distAB;
+}
