@@ -8,14 +8,27 @@ Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 int factorial = Factorial(number);
-Console.WriteLine($"Произведение числа от 1 до {number} -> {factorial}");
+// Console.WriteLine($"Произведение числа от 1 до {number} -> {factorial}");
 
 int Factorial(int num)
 {
     int fact = 1;
-    for (int i = 1; i <= num; i++)
+    int i;
+    for (i = 1; i <= num; i++)
     {
-        fact = fact * i;
+        try
+        {
+            checked
+            {
+                fact = fact * i;
+            }
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Переполнение типа данных!");
+            break;
+        }    
     }
+    Console.WriteLine($"Факториал числа {i - 1} = {fact}");
     return fact;
 }
