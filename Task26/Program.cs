@@ -7,6 +7,9 @@
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+int numberOfCounts = NumberOfCounts(number);
+Console.WriteLine($"Количество цифр в числе {number} -> {numberOfCounts}");
+
 int NumberOfCounts(int num)
 {
     int count = 0;
@@ -17,6 +20,3 @@ int NumberOfCounts(int num)
     }
     return count;
 }
-
-int numberOfCounts = NumberOfCounts(number);
-Console.WriteLine($"Количество цифр в числе {number} -> {numberOfCounts}");
