@@ -26,8 +26,8 @@ void PrintArray(int[] array)
     Console.Write("]");
 }
 
-int[] arr = CreateArrayRndInt(5, -10, 10);
-int SumNumbersEvenPositions(int[] array)
+int[] arr = CreateArrayRndInt(4, -10, 10);
+int SumNumbersOddPositions(int[] array)
 {
     int sumNumbers = 0;
     for (int i = 1; i < array.Length; i = i + 2)
@@ -38,5 +38,5 @@ int SumNumbersEvenPositions(int[] array)
 }
 
 PrintArray(arr);
-int sumNumbersEvenPositions = SumNumbersEvenPositions(arr);
-Console.Write($" -> {sumNumbersEvenPositions}");
+int sumNumbersOddPositions = SumNumbersOddPositions(arr);
+Console.Write($" -> {sumNumbersOddPositions}");

@@ -17,7 +17,7 @@ int[] CreateArrayRndInt(int size, int min, int max) // создание масс
     return array;
 }
 
-void PrintArray(int[] array) // печать массива
+void PrintArray(int[] array) 
 {
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
