@@ -4,20 +4,9 @@
 // 0, 7, 8, -2, -2 -> 2
 // -1, -7, 567, 89, 223-> 3
 
-Console.Write("Сколько будет чисел? ");
-int number = Convert.ToInt32(Console.ReadLine());
-
-int[] CreateArray(int num)
-{
     Console.Write("Введите числа через пробел: ");
-    int[] arr = new int[number];
-    string[] input = Console.ReadLine().Split(' ');
-
-    for (int i = 0; i < arr.Length; ++i)
-        arr[i] = int.Parse(input[i]);
-    return arr;
-}
-
+    int[] strArr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+    
 void PrintArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
@@ -37,8 +26,7 @@ int CountPositive(int[] arr)
     return count;
 }
 
-int[] array = CreateArray(number);
-PrintArray(array);
+PrintArray(strArr);
 
-int countPositive = CountPositive(array);
+int countPositive = CountPositive(strArr);
 Console.Write($" -> {countPositive}");
