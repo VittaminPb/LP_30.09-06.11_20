@@ -34,18 +34,22 @@ void PrintMatrix(int[,] matrix)
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4}, ");
-            else Console.Write($"{matrix[i, j],4}");
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],2}, ");
+            else Console.Write($"{matrix[i, j],2}");
         }
         Console.WriteLine(" |");
     }
 }
 
-int[,] array2D = CreateMatrixRndInt(3, 4, -100, 100);
+bool CheckCorrect(int[,] array2D)
+{
+    return(row >= 0 && row < array2D.GetLength(0) && column >= 0 && column < array2D.GetLength(1));
+}
+
+int[,] array2D = CreateMatrixRndInt(3, 4, 0, 10);
 PrintMatrix(array2D);
 
-if (row >= 0 && row < array2D.GetLength(0) && column >= 0 && column < array2D.GetLength(1))
-{
-    Console.WriteLine($"{row}, {column} -> {array2D[row, column]}");
-}
-else Console.WriteLine($"{row}, {column} -> Такого элемента не существует в данном массиве");
+bool checkCorrect = CheckCorrect(array2D);
+
+if (checkCorrect) Console.WriteLine($"{row}, {column} -> {array2D[row, column]}");
+else Console.WriteLine($"{row}, {column} -> Элемента с таким индексом не существует в данном массиве");
