@@ -16,4 +16,4 @@ return numA * Degree(numA, numB - 1);
 }
 
 int degree = Degree(numberA, numberB);
-Console.Write($"M = {numberA}; N = {numberB} -> {degree}");
+Console.Write($"A = {numberA}; B = {numberB} -> {degree}");
